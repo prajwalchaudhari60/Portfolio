@@ -42,3 +42,12 @@ const yearElement = document.getElementById('year')
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear()
 }
+
+// Redirect to the thank-you page after contact form submission
+const contactForm = document.querySelector('.contact__form')
+if (contactForm) {
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault()
+    window.location.href = 'thank-you.html'
+  })
+}
