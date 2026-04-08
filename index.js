@@ -36,3 +36,16 @@ const headerLogoConatiner = document.querySelector('.header__logo-container')
 headerLogoConatiner.addEventListener('click', () => {
   location.href = 'index.html'
 })
+
+// Auto-update copyright year
+const yearElement = document.getElementById('year')
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear()
+}
+
+// Use a dynamic thank-you redirect URL if available
+const nextInput = document.getElementById('form-next')
+if (nextInput && window.location.protocol !== 'file:') {
+  const thankYouUrl = new URL('thank-you.html', window.location.href).href
+  nextInput.value = thankYouUrl
+}

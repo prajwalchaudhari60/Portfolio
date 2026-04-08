@@ -7,48 +7,84 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background: #f9f9f9;
+      min-height: 100vh;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
-      text-align: center;
+      margin: 0;
+      background: linear-gradient(180deg, #f7fbff 0%, #e9eef9 100%);
       font-family: 'Source Sans Pro', sans-serif;
-      color: #333;
+      color: #111;
     }
+
     .thank-you {
-      max-width: 600px;
+      width: min(100%, 700px);
+      padding: 4rem 3rem;
+      background: #ffffff;
+      border-radius: 2rem;
+      box-shadow: 0 25px 80px rgba(24, 46, 99, 0.12);
+      text-align: center;
     }
-    .thank-you h1 {
-      font-size: 3.6rem;
-      color: #0062b9;
+
+    .thank-you__icon {
+      width: 6rem;
+      margin-bottom: 2rem;
+    }
+
+    .thank-you__title {
+      font-size: 4rem;
       margin-bottom: 1rem;
+      color: #0f2d66;
     }
-    .thank-you p {
+
+    .thank-you__text {
       font-size: 1.8rem;
       color: #555;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
     }
-    .btn--home {
-      margin-top: 2rem;
-      padding: 1rem 3rem;
+
+    .thank-you__button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.4rem 3rem;
       font-size: 1.6rem;
-      background-color: #0062b9;
+      font-weight: 700;
       color: #fff;
-      border-radius: 5px;
+      background: linear-gradient(135deg, #0071e3 0%, #5c4cf0 100%);
+      border-radius: 4rem;
       text-decoration: none;
-      display: inline-block;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 16px 30px rgba(15, 45, 102, 0.18);
     }
-    .btn--home:hover {
-      background-color: #004e95;
+
+    .thank-you__button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 36px rgba(15, 45, 102, 0.24);
+    }
+
+    @media only screen and (max-width: 37.5em) {
+      .thank-you {
+        padding: 3rem 2rem;
+      }
+
+      .thank-you__title {
+        font-size: 3rem;
+      }
+
+      .thank-you__text {
+        font-size: 1.6rem;
+      }
     }
   </style>
 </head>
 <body>
   <div class="thank-you">
-    <h1>Thank You!</h1>
-    <p>Your message has been sent successfully.<br>I'll get back to you as soon as possible.</p>
-    <a href="index.html" class="btn--home">Back to Home</a>
+    <img class="thank-you__icon" src="https://img.icons8.com/fluency/96/000000/like--v1.png" alt="Thank you icon" />
+    <h1 class="thank-you__title">Thank You!</h1>
+    <p class="thank-you__text">Your message has been sent successfully. I will get back to you as soon as possible.</p>
+    <a href="index.html" class="thank-you__button">Back to Home</a>
   </div>
 </body>
 </html>

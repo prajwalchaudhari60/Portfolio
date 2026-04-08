@@ -433,9 +433,30 @@ textarea {
   margin-bottom: 2rem;
 }
 
+.project-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
 @media only screen and (max-width: 37.5em) {
   .projects__row-content-title {
     font-size: 2.4rem;
+  }
+
+  .project-badge {
+    display: block;
+    margin-left: 0;
+    margin-top: 0.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -940,6 +961,20 @@ textarea {
   text-align: center;
 }
 
+.main-footer__lower-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-footer__copyright {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #bbb;
+  letter-spacing: 0.5px;
+}
+
 .main-footer__lower a {
   text-decoration: underline;
   font-weight: bold;
@@ -949,6 +984,10 @@ textarea {
 @media only screen and (max-width: 56.25em) {
   .main-footer__lower {
     padding: 3.5rem 0;
+  }
+
+  .main-footer__copyright {
+    font-size: 1rem;
   }
 }
 
